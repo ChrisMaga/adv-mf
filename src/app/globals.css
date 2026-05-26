@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-deepnavy: #071720;
+  --color-navy: #0C3546;
+  --color-muted: #A3AAB5;
+  --color-light: #EFEFEF;
+  --color-whatsapp: #2EB760;
+
+  --font-title: 'Raleway', sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #071720;
+  color: #EFEFEF;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #071720;
+}
+::-webkit-scrollbar-thumb {
+  background: #0C3546;
+  border-radius: 3px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-light text-deepnavy font-title font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-muted;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-transparent text-light font-title font-bold text-xs tracking-[2px] uppercase border border-light/30 cursor-pointer transition-all duration-300 no-underline hover:border-light hover:bg-light/6;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-whatsapp text-white font-title font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-[#27a354];
+  }
+
+  .section-label {
+    @apply block font-title text-[11px] font-bold tracking-[3px] uppercase text-muted mb-4;
+  }
+
+  .section-title {
+    @apply font-title font-extrabold text-light mb-6;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .section-desc {
+    @apply text-base text-muted max-w-[580px] leading-[1.8];
+  }
+
+  .divider {
+    @apply w-12 h-0.5 bg-muted mb-8;
+  }
+
+  .service-card {
+    @apply transition-all duration-[350ms] hover:!border-muted/25 hover:!bg-navy/30;
+  }
+}
