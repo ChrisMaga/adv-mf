@@ -15,7 +15,7 @@ const equipe = [
     nome: "Dra. Maria Luiza Macedo Faria",
     cargo: "Sócia Advogada",
     oab: "OAB/SP 323.082",
-    bio: "Advocacia especializada em Inventário, Planos de Saúde e Direito Imobiliário — porque cada caso merece atenção personalizada.",
+    bio: "Especialista em Inventário, Planos de Saúde e Direito Imobiliário — porque cada caso merece atenção personalizada.",
   },
 ];
 
