@@ -8,14 +8,14 @@ const equipe = [
     nome: "Dr. Eduardo Macedo Faria",
     cargo: "Sócio Fundador",
     oab: "OAB/SP 293.029",
-    bio: "Especialista em Direito Previdenciário e Trabalhista com mais de 20 anos de atuação. Reconhecido pela dedicação e pela linguagem acessível com cada cliente.",
+    bio: "Especialista em Direito Previdenciário, Trabalhista e Isenções Fiscais para Pessoas com Deficiência, com mais de 20 anos de atuação. Reconhecido pela dedicação e pela linguagem acessível com cada cliente.",
   },
   {
     foto: "/fotoMalu.png",
     nome: "Dra. Maria Luiza Macedo Faria",
     cargo: "Sócia Advogada",
-    oab: "OAB/SP —",
-    bio: "Atua na área de Direito Previdenciário e Trabalhista, com foco em soluções estratégicas e atendimento personalizado para cada demanda.",
+    oab: "OAB/SP 323.082",
+    bio: "Advocacia especializada em Inventário, Planos de Saúde e Direito Imobiliário — porque cada caso merece atenção personalizada.",
   },
 ];
 
