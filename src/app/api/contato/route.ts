@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: 'contato@macedofaria.com.br',
-      to: 'christianem.arcari@gmail.com',
+      to: 'advogadosmacedofaria@gmail.com',
       replyTo: email,
       subject: `📩 Novo contato: ${sanitize(nome)}`,
       html: `
