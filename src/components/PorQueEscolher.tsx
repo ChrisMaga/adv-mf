@@ -5,14 +5,14 @@ import Image from "next/image";
 const equipe = [
   {
     foto: "/fotoEduardo.jpeg",
-    nome: "Dr. Eduardo Macedo",
+    nome: "Dr. Eduardo Macedo Faria",
     cargo: "Sócio Fundador",
     oab: "OAB/SP 293.029",
     bio: "Especialista em Direito Previdenciário e Trabalhista com mais de 20 anos de atuação. Reconhecido pela dedicação e pela linguagem acessível com cada cliente.",
   },
   {
     foto: "/fotoMalu.png",
-    nome: "Dra. Maria Luiza Macedo",
+    nome: "Dra. Maria Luiza Macedo Faria",
     cargo: "Sócia Advogada",
     oab: "OAB/SP —",
     bio: "Atua na área de Direito Previdenciário e Trabalhista, com foco em soluções estratégicas e atendimento personalizado para cada demanda.",
