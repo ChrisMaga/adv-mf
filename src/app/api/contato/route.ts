@@ -68,10 +68,11 @@ export async function POST(req: Request) {
     });
 
     return Response.json({ ok: true });
-  } catch {
-    return Response.json(
-      { ok: false, error: 'Erro ao enviar mensagem. Tente novamente.' },
-      { status: 500 }
-    );
-  }
+  } catch (error) {
+  console.error('Erro Resend:', JSON.stringify(error));
+  return Response.json(
+    { ok: false, error: String(error) },
+    { status: 500 }
+  );
+}
 }
