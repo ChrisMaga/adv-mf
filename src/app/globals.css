@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -8,7 +7,7 @@
   --color-light: #EFEFEF;
   --color-whatsapp: #2EB760;
 
-  --font-title: 'Raleway', sans-serif;
+
   --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -52,28 +51,28 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-light text-deepnavy font-title font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-muted;
+    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-light text-deepnavy font-body font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-deepnavy/90 hover:text-white;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-transparent text-light font-title font-bold text-xs tracking-[2px] uppercase border border-light/30 cursor-pointer transition-all duration-300 no-underline hover:border-light hover:bg-light/6;
+    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-transparent text-light font-body font-bold text-xs tracking-[2px] uppercase border border-light/30 cursor-pointer transition-all duration-300 no-underline hover:border-light hover:bg-light/6;
   }
 
   .btn-whatsapp {
-    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-whatsapp text-white font-title font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-[#27a354];
+    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-whatsapp text-white font-body font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-[#27a354];
   }
 
   .section-label {
-    @apply block font-title text-[11px] font-bold tracking-[3px] uppercase text-muted mb-4;
+    @apply block font-body text-5xl font-bold mb-4 mt-2;
   }
 
   .section-title {
-    @apply font-title font-extrabold text-light mb-6;
+    @apply font-body font-extrabold text-light mb-6;
     font-size: clamp(2rem, 4vw, 3rem);
   }
 
   .section-desc {
-    @apply text-base text-muted max-w-[580px] leading-[1.8];
+    @apply text-[1.55rem] text-muted max-w-185 leading-[1.8];
   }
 
   .divider {

@@ -9,6 +9,7 @@ type NavLink = { label: string; href: string; children?: NavChild[] };
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/#hero" },
+  { label: "Áreas de Atuação", href: "/#especialidades" },
   {
     label: "Especialidades",
     href: "/#especialidades",
@@ -17,6 +18,7 @@ const navLinks: NavLink[] = [
       { label: "Trabalhista", href: "/trabalhista", desc: "Rescisões, horas extras, FGTS" },
     ],
   },
+  
   { label: "Diferenciais", href: "/#diferenciais" },
   { label: "Por que nos escolher", href: "/#escolher" },
   { label: "Contato", href: "/#contato" },
@@ -82,7 +84,7 @@ export default function Navbar() {
             : "py-1 bg-deepnavy border-b border-transparent"
         }`}
       >
-        <div className="max-w-300 mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-450 mx-auto px-6 flex items-center justify-between">
           <Link href="/" className="no-underline">
             <Image src="/logomarca.png" alt="Logo" height={40} width={150} className="object-contain" />
           </Link>
@@ -136,19 +138,29 @@ export default function Navbar() {
               href={WA_HREF}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp text-[11px]! px-5.5! py-2.5!"
+              className="btn-whatsapp text-[11px]! px-5.5! py-2.5! rounded-md"
             >
               <WaIcon />
               WhatsApp
             </a>
           </nav>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="min-[961px]:hidden flex flex-col gap-1.25 p-1 bg-transparent border-none cursor-pointer"
-            aria-label="Menu"
-          >
+          {/* Mobile WhatsApp + hamburger */}
+          <div className="min-[961px]:hidden flex items-center gap-8">
+            <a
+              href={WA_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp text-[11px]! px-4! py-2! rounded-md"
+            >
+              <WaIcon />
+              WhatsApp
+            </a>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="flex flex-col gap-1.25 p-1 bg-transparent border-none cursor-pointer"
+              aria-label="Menu"
+            >
             {[0, 1, 2].map((i) => (
               <span
                 key={i}
@@ -164,7 +176,8 @@ export default function Navbar() {
                 }}
               />
             ))}
-          </button>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -210,16 +223,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             )
-          )}
-          <a
-            href={WA_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp"
-            onClick={closeMobile}
-          >
-            WhatsApp
-          </a>
+          )}          
         </div>
       )}
     </>

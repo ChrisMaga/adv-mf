@@ -15,25 +15,23 @@ export default function Hero() {
       }}
     >
 
-      <div className="max-w-300 mx-auto px-6 pt-28 pb-16 relative z-2">
-        <div className="max-w-175">         
+      <div className="w-full px-32 pt-58 pb-16 relative z-2">
+        <div className="max-w-220">
           <h1
-            className="font-title font-black text-light leading-[1.05] mb-7"
+            className="font-title font-black text-light leading-[1.15] mb-7"
             style={{
-              fontSize: "clamp(2.8rem, 6vw, 5rem)",
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
               animation: "fadeUp 0.7s 0.2s ease both",
             }}
           >
-            Seus direitos merecem uma defesa que não recua.
+            Especialistas em Aposentadoria, Benefícios do INSS, Direitos Trabalhistas e Isenções Ficais
           </h1>
 
           <p
             className="text-[1.05rem] text-muted leading-[1.9] mb-12 max-w-140"
             style={{ animation: "fadeUp 0.7s 0.35s ease both" }}
           >
-            Serviço jurídico completo e personalizado, guiado pela ética,
-            transparência e expertise. Soluções estratégicas para garantir seus
-            direitos com atendimento presencial e online em todo o estado de SP.
+            Atendimento jurídico para aposentados, trabalhadores e pessoas que desejam garantir benefícios previdenciários, verbas trabalhistas e isenções fiscais previstas na legislação.
           </p>
 
           <div
@@ -44,12 +42,12 @@ export default function Hero() {
               href="https://wa.me/5511998320101?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20com%20Dr%20Eduardo."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp"
+              className="btn-whatsapp rounded-md"
             >
               <WaIcon />
               Falar com Eduardo
             </a>
-            <a href="#contato" className="btn-outline">
+            <a href="#contato" className="btn-outline rounded-md">
               Agendar Reunião
             </a>
           </div>
@@ -61,8 +59,8 @@ export default function Hero() {
           >
             {[
               { number: "+20", label: "Anos de Experiência" },
-              { number: "+1000", label: "Casos Resolvidos" },
-              { number: "2", label: "Áreas de Atuação" },
+              { number: "+2mil", label: "Casos Resolvidos" },
+              { number: "3", label: "Áreas de Atuação" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-title text-[2.2rem] font-extrabold text-light leading-none mb-1.5">

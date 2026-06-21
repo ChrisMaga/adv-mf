@@ -45,7 +45,7 @@ export default function Contato() {
         </svg>
       ),
       label: "Endereço",
-      value: "Rua do Bosque, 199, Jardim Bela Vista\nSanto André - SP, 09040-280",
+      value: "Rua do Bosque, 199 — Jardim Bela Vista\nSanto André – SP (Região do Grande ABC)",
     },
     {
       icon: (
@@ -64,7 +64,8 @@ export default function Contato() {
         </svg>
       ),
       label: "E-mail",
-      value: "advogadosmacedofaria@outlook.com",
+      value: "mf.eduardo@gmail.com",
+      
     },
     {
       icon: (
@@ -83,17 +84,16 @@ export default function Contato() {
   return (
     <section id="contato" className="py-24 px-6 bg-navy relative overflow-hidden">
       <div className="max-w-300 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 items-start">
+        <span className="section-label text-center leading-15">Fale com um Advogado Especializado no Grande ABC/SP</span>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 items-start mt-15">
           {/* Info */}
           <div>
-            <span className="section-label">Contato</span>
-            <h2 className="section-title">
-              Não deixe para depois o que pode mudar sua vida hoje
+            <h2 className="section-title text-2xl">
+              Atendimento rápido e personalizado para moradores de Santo André, São Bernardo e São Caetano
             </h2>
-            <div className="divider" />
-            <p className="section-desc mb-8">
-              Muitas pessoas perdem direitos simplesmente por não procurar ajuda
-              a tempo. Fale conosco agora, sem compromisso.
+            <div className="divider mb-5" />
+            <p className="section-desc text-lg text-justify mb-8">
+              Muitas pessoas do Grande ABC perdem aposentadorias, benefícios do INSS e direitos trabalhistas por falta de orientação. Fale conosco agora — consulta inicial gratuita, análise completa do seu caso e explicação clara dos próximos passos.
             </p>
 
             <div className="flex flex-col gap-6">
@@ -118,7 +118,7 @@ export default function Contato() {
           {/* Form */}
           <div className="bg-deepnavy/50 border border-muted/10 p-12">
             <h3 className="font-title text-[1.2rem] font-bold text-light mb-8">
-              Solicite uma consulta gratuita
+              Solicite sua análise gratuita de aposentadoria, benefício negado ou direito trabalhista
             </h3>
 
             {enviado ? (
@@ -176,7 +176,7 @@ export default function Contato() {
                 {erro && (
                   <p className="text-red-400 font-title text-[0.85rem] text-center">{erro}</p>
                 )}
-                <button type="submit" className="btn-primary w-full justify-center mt-2">
+                <button type="submit" className="btn-primary w-full justify-center mt-2 rounded-md">
                   Enviar Mensagem
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <line x1="22" y1="2" x2="11" y2="13" />
