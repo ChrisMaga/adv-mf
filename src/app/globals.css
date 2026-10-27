@@ -1,85 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  --color-deepnavy: #071720;
-  --color-navy: #0C3546;
-  --color-muted: #A3AAB5;
-  --color-light: #EFEFEF;
-  --color-whatsapp: #2EB760;
+  /* Identidade Macedo Faria (mesma do Instagram) */
+  --color-noturno: #071720;
+  --color-petroleo: #0c3546;
+  --color-gelo: #efefef;
+  --color-prata: #a3aab5;
+  --color-ouro: #c9a45c;
+  --color-ouro-escuro: #7a5c22;
+  --color-numero: #a07a30;
+  --color-texto: #3f4d5b;
+  --color-claro: #d5d9df;
+  --color-suave: #c9ced6;
+  --color-linha: #d3d7dd;
+  --color-rodape: #050f15;
 
-
-  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-title: "Montserrat", system-ui, sans-serif;
+  --font-body: "Poppins", system-ui, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
-  background-color: #071720;
-  color: #EFEFEF;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--color-gelo);
+  color: var(--color-noturno);
+  font-family: var(--font-body);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #071720;
-}
-::-webkit-scrollbar-thumb {
-  background: #0C3546;
-  border-radius: 3px;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-up {
-  animation: fadeUp 0.7s ease forwards;
+:focus-visible {
+  outline: 2px solid var(--color-ouro);
+  outline-offset: 3px;
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-light text-deepnavy font-body font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-deepnavy/90 hover:text-white;
+  .container-site {
+    @apply mx-auto w-full max-w-[1200px] px-6;
   }
 
-  .btn-outline {
-    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-transparent text-light font-body font-bold text-xs tracking-[2px] uppercase border border-light/30 cursor-pointer transition-all duration-300 no-underline hover:border-light hover:bg-light/6;
+  .eyebrow {
+    @apply font-title text-[13px] font-bold uppercase tracking-[0.14em];
   }
 
-  .btn-whatsapp {
-    @apply inline-flex items-center gap-2.5 px-8 py-3.5 bg-whatsapp text-white font-body font-bold text-xs tracking-[2px] uppercase cursor-pointer transition-all duration-300 no-underline hover:bg-[#27a354];
+  .h-section {
+    @apply font-title font-extrabold leading-[1.15];
+    font-size: clamp(28px, 3.6vw, 42px);
   }
 
-  .section-label {
-    @apply block font-body text-5xl font-bold mb-4 mt-2;
+  .btn-ouro {
+    @apply inline-flex min-h-11 items-center justify-center gap-2.5 rounded-md bg-ouro px-7 py-4 font-title text-base font-bold text-noturno no-underline transition-colors hover:bg-[#d6b46e];
   }
 
-  .section-title {
-    @apply font-body font-extrabold text-light mb-6;
-    font-size: clamp(2rem, 4vw, 3rem);
+  .btn-contorno {
+    @apply inline-flex min-h-11 items-center justify-center gap-2.5 rounded-md border border-prata px-6 py-[15px] font-title text-base font-semibold text-gelo no-underline transition-colors hover:border-gelo hover:bg-white/5;
   }
 
-  .section-desc {
-    @apply text-[1.55rem] text-muted max-w-185 leading-[1.8];
-  }
-
-  .divider {
-    @apply w-12 h-0.5 bg-muted mb-8;
-  }
-
-  .service-card {
-    @apply transition-all duration-[350ms] hover:!border-muted/25 hover:!bg-navy/30;
+  .input-site {
+    @apply min-h-12 w-full rounded-md border border-prata bg-white px-3.5 py-3 font-body text-base text-noturno outline-none focus:border-ouro;
   }
 }
