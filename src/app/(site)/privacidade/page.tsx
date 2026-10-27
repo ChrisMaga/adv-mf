@@ -4,7 +4,7 @@ import { EMAIL_CONTATO } from "@/lib/site";
 
 // TODO: preencher com o dia em que o site novo for ao ar (ex.: "10 de novembro de 2026")
 // e atualizar sempre que esta política mudar.
-const ULTIMA_ATUALIZACAO = "[DATA DA PUBLICAÇÃO]";
+const ULTIMA_ATUALIZACAO = "27 de outubro de 2026";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade",
